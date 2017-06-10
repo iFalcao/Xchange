@@ -29,7 +29,7 @@
                 <i class="fa fa-list"></i>
               <% end %>
               <% if  current_admin.email != admin.email %>
-                <%= link_to backoffice_admin_path(admin), method: "delete", data: {confirm: "Deseja excluir o adminstrador (#{admin.email})"}, class:"btn btn-danger btn-circle" do %>
+                <%= link_to backoffice_admin_path(admin), method: "delete", data: {confirm: "Tem certeza que deseja excluir o administrador (<b>#{admin.email}</b>)?"}, class:"btn btn-danger btn-circle" do %>
                   <i class="fa fa-times"></i>
                 <% end %></td>
               <% else %>

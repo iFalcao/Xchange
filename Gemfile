@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
-gem 'faker', '~> 1.7', '>= 1.7.3'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
 # Flexible authentication solution for Rails with Warden.
@@ -15,8 +13,13 @@ gem 'devise'
 gem 'devise-i18n'
 # JQuery gem
 gem 'jquery-rails'
-# The most popular front-end framework for developing responsive, mobile first projects on the web.
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+source 'https://rails-assets.org' do
+  # The most popular front-end framework for developing responsive, mobile first projects on the web.
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # Bootbox - Notifications
+  gem 'rails-assets-bootbox'
+end
+
 # Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -59,6 +62,9 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+  gem 'faker', '~> 1.7', '>= 1.7.3'
+
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
