@@ -28,9 +28,15 @@
               <%= link_to edit_backoffice_admin_path(admin), class:"btn btn-primary btn-circle" do %>
                 <i class="fa fa-list"></i>
               <% end %>
-              <%= link_to backoffice_admins_path, class:"btn btn-danger btn-circle", disabled:"true" do %>
-                <i class="fa fa-times"></i>
-              <% end %></td>
+              <% if  current_admin.email != admin.email %>
+                <%= link_to backoffice_admin_path(admin), method: "delete", data: {confirm: "Deseja excluir o adminstrador (#{admin.email})"}, class:"btn btn-danger btn-circle" do %>
+                  <i class="fa fa-times"></i>
+                <% end %></td>
+              <% else %>
+                <%= link_to '#', class:"btn btn-danger btn-circle", disabled:"disabled" do %>
+                  <i class="fa fa-times"></i>
+                <% end %></td>  
+              <% end %>
             </tr>
           <% end %>
         </tbody>
