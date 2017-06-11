@@ -3,6 +3,7 @@ class Backoffice::AdminsController < BackofficeController
 
   def index
     @admins = Admin.all
+    @admins = Admin.page params[:page]
   end
 
   def new

@@ -3,6 +3,7 @@ class Backoffice::CategoriesController < BackofficeController
 
   def index
     @categories = Category.all
+    @categories = Category.page params[:page]
   end
 
   def new

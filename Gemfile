@@ -11,6 +11,8 @@ gem 'rails-i18n'
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# ⚡ A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
 # JQuery gem
 gem 'jquery-rails'
 source 'https://rails-assets.org' do
