@@ -17,7 +17,7 @@
   <%= form_for([:backoffice, @category]) do |f| %>
     <div class="form-group">
       <label>Descrição</label>
-      <%= f.text_field :description, class:"form-control"%>
+      <%= f.text_field :description, placeholder:"Exemplo: Animais/Pet", class:"form-control"%>
     </div>
     <button type="submit" class="btn btn-default">Salvar</button>
   <% end %>
