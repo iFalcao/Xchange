@@ -16,6 +16,7 @@ puts "Categorias criadas ... 100%"
 puts "Criando admnistrador padrão"
     Admin.create!(
         name: "Administrador Padrão",
+        role: 0,
         email: "admin@admin.com", 
         password:"123456", 
         password_confirmation:"123456"

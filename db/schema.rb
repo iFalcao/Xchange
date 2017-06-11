@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170611010643) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.integer "role"
+    t.integer "role", default: 1
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
