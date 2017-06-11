@@ -16,12 +16,14 @@
  <div class="panel-body">
   <%= form_for([:backoffice, @admin]) do |f| %>
     <div class="form-group">
+      <label>Nome</label>
+      <%= f.text_field :name, placeholder:"Digite o seu nome", class:"form-control"%>
       <label>E-mail</label>
-      <%= f.text_field :email, class:"form-control"%>
+      <%= f.text_field :email, placeholder:"Digite o seu email", class:"form-control"%>
       <label>Senha</label>
-      <%= f.password_field :password, class:"form-control"%>
+      <%= f.password_field :password, placeholder:"Digite a senha", class:"form-control"%>
       <label>Confirme a senha</label>
-      <%= f.password_field :password_confirmation, class:"form-control"%>
+      <%= f.password_field :password_confirmation, placeholder:"Digite a senha novamente", class:"form-control"%>
     </div>
     <button type="submit" class="btn btn-default">Salvar</button>
   <% end %>
