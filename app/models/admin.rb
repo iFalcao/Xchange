@@ -1,5 +1,7 @@
 class Admin < ApplicationRecord
-  enum role: [:full_access, :restricted_access]
+  enum role: { :full_access => 0, :restricted_access => 1 }
+  scope :with_full_access, -> { where(role: 'full_access')}
+
   paginates_per 10
 
   # Include default devise modules. Others available are:
@@ -7,11 +9,5 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def tipo_de_acesso
-      if self.restricted_access?
-        "Acesso Restrito"
-      else
-        "Acesso Completo"
-      end
-  end
+  
 end

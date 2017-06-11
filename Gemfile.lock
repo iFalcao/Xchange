@@ -71,6 +71,8 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-i18n (1.1.2)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.6.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -221,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-i18n
+  enum_help
   faker (~> 1.7, >= 1.7.3)
   jbuilder (~> 2.5)
   jquery-rails

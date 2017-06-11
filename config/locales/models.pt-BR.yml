@@ -1,0 +1,21 @@
+pt-BR:
+  activerecord:
+    models:
+      admin:
+        one: Administrador
+        other: Administradores 
+      member:
+        one: Usuário
+        other: Usuários
+      category:
+        one: Categoria
+        other: Categorias
+    attributes:
+      admin:
+        password: Senha
+        password_confirmation: Confirmação da Senha
+      member:
+        password: Senha
+        password_confirmation: Confirmação da Senha
+      category:
+        description: Descrição

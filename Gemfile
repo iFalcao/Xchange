@@ -11,6 +11,8 @@ gem 'rails-i18n'
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
 # ⚡ A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 # JQuery gem
