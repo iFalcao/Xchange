@@ -13,6 +13,8 @@ gem 'devise'
 gem 'devise-i18n'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
+# Minimal authorization through OO design and pure Ruby classes
+gem 'pundit'
 # ⚡ A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 # JQuery gem

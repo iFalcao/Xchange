@@ -8,6 +8,7 @@ class Backoffice::AdminsController < BackofficeController
 
   def new
     @admin = Admin.new
+    authorize @admin, :new?
   end
 
   def create
@@ -23,6 +24,7 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def update
+    authorize @admin, :update?
     if @admin.update(params_admin)
       redirect_to backoffice_admins_path, notice:"Adminstrador (#{@admin.email}) atualizado com sucesso!"
     else
@@ -31,6 +33,7 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def destroy
+    authorize @admin, :destroy?
     admin_email = @admin.email
     if @admin.destroy
       redirect_to backoffice_admins_path, notice:"Adminstrador (#{admin_email}) deletado com sucesso!"
