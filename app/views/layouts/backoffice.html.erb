@@ -40,8 +40,18 @@
     </div>
 
     <script>
+        <% if notice %>
+            $.notify('<%= notice %>', {
+              autoHideDelay: 2500,
+              position: "top center",
+              className: "success"
+            });
+        <% end %> 
         <% if alert %>
-            alert('<%= alert %>')
+            $.notify("<%= alert %>", {
+                position: "top center",
+                className: "error"
+            });
         <% end %>        
     </script>
 </body>

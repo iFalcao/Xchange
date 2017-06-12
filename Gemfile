@@ -24,6 +24,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '3.3.7'
   # Bootbox - Notifications
   gem 'rails-assets-bootbox'
+  # A simple, versatile notification library
+  gem 'rails-assets-notifyjs'
 end
 
 # Rails gem of the Bootstrap based admin theme SB Admin 2.
