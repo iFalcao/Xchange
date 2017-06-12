@@ -5,8 +5,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     Listando adminstradores
-    <%= link_to new_backoffice_admin_path, class: "btn btn-success btn-circle pull-right", style: "margin-top: -5px" do %>
-      <i class="fa fa-plus"></i>
+    <% #Só carrega o botão para adicionar adminstrador caso seja autorizado %>
+    <% if policy(@admins).new? %>
+      <%= link_to new_backoffice_admin_path, class: "btn btn-success btn-circle pull-right", style: "margin-top: -5px" do %>
+        <i class="fa fa-plus"></i>
+      <% end %>
     <% end %>
   </div>
   <!-- /.panel-heading -->
@@ -45,7 +48,6 @@
           <% end %>
         </tbody>
       </table>
-      <%= paginate @admins, window: 2 %>
     </div>
     <!-- /.table-responsive -->
   </div>

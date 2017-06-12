@@ -11,9 +11,14 @@ class AdminPolicy < ApplicationPolicy
       user.full_access?
   end
 
+#Define o escopo através do método resolve
   class Scope < Scope
     def resolve
-      scope
+      if user.full_access?
+        scope.all
+      else
+        scope.with_restricted_access
+      end
     end
   end
 end
