@@ -9,6 +9,8 @@ end
 gem 'rails-i18n'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
+# Manage Procfile-based applications
+gem 'foreman'
 # Translations for the devise gem
 gem 'devise-i18n'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
@@ -72,7 +74,9 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
   gem 'faker', '~> 1.7', '>= 1.7.3'
-
+  # Catches mail and serves it through a dream.
+  gem 'mailcatcher'
+  
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
