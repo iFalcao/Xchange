@@ -18,14 +18,20 @@
     <div class="form-group">
       <label>Nome</label>
       <%= f.text_field :name, placeholder:"Digite o seu nome", class:"form-control"%>
-      <label>E-mail</label>
-      <%= f.text_field :email, placeholder:"Digite o seu email", class:"form-control"%>
-
-      <label>Senha</label>
-      <%= f.password_field :password, placeholder:"Digite a senha", class:"form-control"%>
-      <label>Confirme a senha</label>
-      <%= f.password_field :password_confirmation, placeholder:"Digite a senha novamente", class:"form-control"%>
-      </br>
+    </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <%= f.text_field :email, placeholder:"Digite o seu email", class:"form-control"%>
+      </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <%= f.password_field :password, placeholder:"Digite a senha", class:"form-control"%>
+      </div>
+      <div class="form-group">
+        <label>Confirme a senha</label>
+        <%= f.password_field :password_confirmation, placeholder:"Digite a senha novamente", class:"form-control"%>
+        </br>
+      </div>
       <div class="form-group">
         <label>Tipo de Acesso</label>
         <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
@@ -34,7 +40,6 @@
           </div>
         <% end %>
       </div>
-    </div>
     <button type="submit" class="btn btn-default">Salvar</button>
   <% end %>
 </div>
