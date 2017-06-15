@@ -1,11 +1,11 @@
 // Verifica se a página foi carregada completamente antes de executar o modal
 $(function(){
-    var idModal = '#sendMailModal';
+    let idModal = '#sendMailModal';
 
     $('#recipient-name').val('<%= @admin.email %>');
     $('#exampleModalLabel').text('Enviar mensagem para <%= @admin.name %>');
     $(idModal).modal();
     $(idModal).on('shown.bs.modal', function () {
-      $('#message-text').focus();
+      $('#subject-text').focus();
     })
 });
