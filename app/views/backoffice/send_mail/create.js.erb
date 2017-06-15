@@ -2,5 +2,5 @@ $(function(){
     $('#sendMailModal').modal('hide');
     $('#message-text').val('');
     $('#subject-text').val('');
-    $.notify('E-mail enviado com sucesso!', "success");
+    $.notify('<%= @notify_message %>', "<%= @notify_flag %>");
 });

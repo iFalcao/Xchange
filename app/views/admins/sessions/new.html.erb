@@ -31,6 +31,6 @@
 <!-- Deals with errors messages from devise-->
 <% flash.each do |key, value| %>
     <script>
-        $.notify("<%= value %>" , "error");
+        $.notify("<%= value %>" , "info");
     </script>
 <% end %>
