@@ -30,7 +30,8 @@ namespace :util do
         Ad.create!(title: Faker::Lorem.sentence([2,3,4,5].sample),
             description: Faker::Lorem.paragraphs(2),
             member: Member.all.sample,
-            category: Category.all.sample)
+            category: Category.all.sample,
+            price: "#{Random.rand(500)},#{Random.rand(99)}")
     end
     puts "Anúncios criados ... 100%"
   end

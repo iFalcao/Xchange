@@ -9,6 +9,8 @@ end
 gem 'rails-i18n'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails', '~>1'
 # Manage Procfile-based applications
 gem 'foreman'
 # Translations for the devise gem
