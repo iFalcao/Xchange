@@ -15,6 +15,8 @@ gem 'money-rails', '~>1'
 gem 'foreman'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Easy file attachment management for ActiveRecord
+gem "paperclip", "~> 5.0.0"
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes

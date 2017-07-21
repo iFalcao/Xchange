@@ -3,6 +3,6 @@ class Site::HomeController < ApplicationController
 
   def index
     @categories = Category.order(:description)
-    @ads = Ad.limit(5).order(created_at: :desc)
+    @ads = Ad.limit(6).order(created_at: :desc)
   end
 end
